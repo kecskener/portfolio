@@ -1,0 +1,229 @@
+@keyframes scroll{
+    0%{
+        opacity: 0;
+        transform: translateY(.5rem);
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+.heading{
+    &__main{
+        width: 100%;
+        height: 95%;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        position: relative;
+        &--moon{
+            width: 3.5%;
+            height: 7.5%;
+            right: 7.5%;
+            position: absolute;
+            top: 12.5%;
+            background-image: url(../../../assets/images/moon.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: blur(.035rem);
+        }
+        &--plane{
+            width: 3.5%;
+            height: 7.5%;
+            right: 40%;
+            position: absolute;
+            top: 60%;
+            background-image: url(../../../assets/images/plane.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: brightness(.5);
+        }
+        &--meteor{
+            width: 5%;
+            height: 10%;
+            right: 75%;
+            position: absolute;
+            top: 25%;
+            background-image: url(../../../assets/images/meteor.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &--text{
+            grid-row: 4 / span 3;
+            grid-column: 1 / span 4;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-left: 3.75rem;
+            &__heading{
+                color: white;
+                font-weight: lighter;
+                font-size: 1.5rem;
+            }
+            &__subheading{
+                color: white;
+                opacity: .7;
+                font-weight: lighter;
+                font-size: 1.15rem;
+                width: 75%;
+                letter-spacing: .045rem;
+                word-spacing: .15rem;
+                padding-top: .75rem;
+            }
+        }
+        &--scroll{
+            grid-row: 7 / span 10;
+            grid-column: 4 / span 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__mouse{
+                flex-basis: 5%;
+                height: 18%;
+                border: .15rem solid white;
+                border-radius: 10rem;
+                display: flex;
+                justify-content: center;
+                &--wheel{
+                    flex-basis: 12.5%;
+                    height: 17.5%;
+                    background-color: white;
+                    border-radius: 2rem;
+                    animation: scroll 2.5s linear infinite;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 360px) and (max-width:768px){
+    .heading{
+        grid-row: 1 / span 2;
+    }
+    .heading__main{
+        &--text{
+            grid-row: 4 / span 3;
+            grid-column: 1 / span 7;
+            padding-left: 2rem;
+            &__heading{
+                font-size: 1.5rem;
+            }
+            &__subheading{
+                font-size: 1.2rem;
+                padding-top: 2rem;
+                width: 85%;
+            }
+        }
+        &--scroll,&--moon,&--plane,&--meteor{
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 737px) and (max-width: 740px){
+    .heading__main{
+        height: 85%;
+        &--text{
+            grid-row: 5 / span 3;
+            grid-column: 1 / span 7;
+            padding-left: 2rem;
+            &__heading{
+                font-size: 1.5rem;
+            }
+            &__subheading{
+                font-size: 1.1rem;
+                padding-top: 1rem;
+                width: 85%;
+            }
+        }
+        &--scroll,&--moon,&--plane,&--meteor{
+            display: none;
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width: 1024px){
+    .heading__main{
+        height: 90%;
+        &--text{
+            grid-row: 4 / span 3;
+            grid-column: 1 / span 6;
+            padding-left: 4rem;
+            &__heading{
+                font-size: 1.5rem;
+            }
+            &__subheading{
+                font-size: 1.2rem;
+                padding-top: 2rem;
+                width: 85%;
+            }
+        }
+        &--moon,&--plane,&--meteor{
+            display: none;
+        }
+        &--scroll{
+            &__mouse{
+                flex-basis: 7.5%;
+                height: 21%;
+            }
+        }
+    }
+}
+
+@media (min-width: 360px) and (max-width: 414px){
+    .heading__main{
+        height: 90%;
+        &--text{
+            grid-row: 4 / span 3;
+            grid-column: 1 / span 10;
+            &__heading{
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
+            &__subheading{
+                font-size: 1rem;
+                padding-top: 1rem;
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (min-width: 415px) and (max-width: 736px){
+    .heading__main{
+        height: 90%;
+        &--text{
+            grid-row: 3 / span 3;
+            grid-column: 1 / span 8;
+            &__heading{
+                font-size: 1.25rem;
+            }
+            &__subheading{
+                font-size: 1rem;
+                padding-top: 1rem;
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .heading__main{
+        height: 90%;
+        &--text{
+            &__heading{
+                font-size: 1rem;
+            }
+            &__subheading{
+                padding-top: .5rem;
+                font-size: .9rem;
+                word-spacing: .01rem;
+            }
+        }
+    }
+}

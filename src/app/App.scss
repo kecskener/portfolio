@@ -1,0 +1,30 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Aller', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 350vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    scroll-snap-type: y mandatory;
+}
+
+:root{
+    --black: #2c2c2c;
+    --blackest: #1b1b1b;
+    --blacked: #222222;
+    --orange: #F55536;
+    --drib: #f5f5f5;
+    --green: #28af6b;
+}

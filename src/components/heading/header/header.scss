@@ -1,0 +1,243 @@
+@keyframes slick{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.heading{
+    &__header{
+        flex-basis: 8%;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        align-items: flex-start;
+        position: sticky;
+        &--hamburger{
+            display: none;
+        }
+        &--brand{
+            flex-basis: 12.5%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &__item{
+                color: white;
+                font-size: 1.35rem;
+            }
+        }
+        &--nav{
+            flex-basis: 35%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            &__item{
+                color: white;
+                opacity: .7;
+                font-size: 1.05rem;
+                transition: all .2s linear;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        &--menu{
+            background-color: var(--black);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            animation: slick .4s linear;
+            &__item{
+                width: 32%;
+                height: 15%;
+                padding-top: 1.25rem;
+                &:nth-child(3){
+                    padding-left: 2rem;
+                }
+                &:nth-child(1){
+                    padding-left: 1rem;
+                }
+                &:nth-child(2){
+                    padding-left: .5rem;
+                }
+            }
+            &__close{
+                width: 20%;
+                height: 20%;
+                padding-left: 1rem;
+                &--svg{
+                    &:hover{
+                        fill: var(--orange);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.closed{
+    display: none;
+}
+
+@media (min-width: 415px) and (max-width: 736px){
+    .heading__header--menu__item{
+        &:nth-child(1){
+            padding-left: 4.5rem;
+        }
+        &:nth-child(2){
+            padding-left: 2rem;
+        }
+        &:nth-child(3){
+            padding-left: 2rem;
+        }
+    }
+    .heading__header--menu__close{
+        display: flex;
+        justify-content: center;
+        width: 17.5%;
+    }
+}
+
+@media only screen and (width: 732px){
+    .heading__header--menu__item{
+        &:nth-child(1){
+            padding-left: 4.5rem;
+        }
+        &:nth-child(2){
+            padding-left: 3rem;
+        }
+        &:nth-child(3){
+            padding-left: 3rem;
+        }
+    }
+    .heading__header--menu__close{
+        width: 15%;
+    }
+}
+
+@media (min-width: 415px) and (max-width:768px){
+    .heading__header{
+        flex-basis: 10%;
+    }
+    .heading__header--brand{
+        flex-basis: 25%;
+    }
+    .heading__header--nav{
+        flex-basis: 75%;
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 736px) and (max-width: 1024px){
+    .heading__header{
+        flex-basis: 15%;
+    }
+    .heading__header--brand{
+        flex-basis: 25%;
+    }
+    .heading__header--nav{
+        flex-basis: 40%;
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 737px) and (max-width: 740px){
+    .heading__header{
+        flex-basis: 15%;
+    }
+    .heading__header--brand{
+        flex-basis: 25%;
+    }
+    .heading__header--nav{
+        flex-basis: 50%;
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 414px){
+    .heading__header{
+        flex-basis: 15%;
+    }
+    .heading__header--brand{
+        flex-basis: 40%;
+    }
+    .heading__header--nav{
+       display: none;
+    }
+    .heading__header--hamburger{
+        display: block;
+        flex-basis: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__svg{
+            width: 80%;
+            height: 30%;
+            fill: white;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .heading__header{
+        flex-basis: 15%;
+    }
+    .heading__header--brand{
+        flex-basis: 50%;
+    }
+    .heading__header--nav{
+       display: none;
+    }
+    .heading__header--hamburger{
+        display: block;
+        flex-basis: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__svg{
+            width: 80%;
+            height: 30%;
+            fill: white;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 415px) and(max-width: 736px){
+    .heading__header{
+        flex-basis: 15%;
+    }
+    .heading__header--brand{
+        flex-basis: 25%;
+    }
+    .heading__header--nav{
+       display: none;
+    }
+    .heading__header--hamburger{
+        display: block;
+        flex-basis: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__svg{
+            width: 100%;
+            height: 30%;
+            fill: white;
+            text-align: center;
+            margin-left: 7.5rem;
+        }
+    }
+}

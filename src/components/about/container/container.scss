@@ -1,0 +1,203 @@
+.about{
+    &--container{
+        grid-row: 2 / span 3;
+        grid-column: 1 / span 10;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        &__card{
+            flex-basis: 18%;
+            height: 65%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            transition: all .4s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+            &--heading{
+                font-size: 1.5rem;
+                flex-basis: 10%;
+                width: 100%;
+                padding-top: 2rem;
+                text-align: center;
+            }
+            &--subheading{
+                font-size: 1rem;
+                opacity: .7;
+                padding-bottom: 1rem;
+                padding-left: 2.5rem;
+                padding-right: 1rem;
+            }
+            &--heading,&--subheading{
+                color: white;
+                font-weight: lighter;
+            }
+        }
+    }
+}
+
+
+.orange{
+    background-color: var(--orange); 
+    background-image:  url(../../../assets/images/web.png);
+    background-size: 100% 65%;
+    background-repeat: no-repeat;
+    background-position: 0 30%;
+}
+
+.red{
+    background-color: #EA4C43;
+    background-image: url(../../../assets/images/hack.png);
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+    background-position: 0 30%;
+}
+
+.blue{
+    background-color: #28af6b;
+    background-image: url(../../../assets/images/coding.png);
+    background-size: 100% 65%;
+    background-repeat: no-repeat;
+    background-position: 0 30%;
+}
+
+
+@media only screen and (width: 768px){
+
+    .about--container{
+        grid-row: 2 / span 3;
+    }
+
+    .about--container__card{
+        flex-basis: 80%;
+        height: 30%;
+    }
+}
+
+@media only screen and (width: 768px){
+    .orange,.blue{
+        background-size: 50% 72.5%;
+        background-position: center;
+    }
+    .red{
+        background-size: 50% 71.5%;
+        background-position: 50% 40%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .about--container__card{
+        flex-basis: 80%;
+        height: 27.5%;
+    }
+    .orange,.red,.blue{
+        background-image: none;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 414px){
+    .about--container__card{
+        flex-basis: 80%;
+        height: 35%;
+        margin-top: 2rem;
+    }
+    .orange,.red,.blue{
+        background-image: none;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 768px){
+    .about--container__card{
+        flex-basis: 80%;
+        height: 35%;
+        margin-top: 1.15rem;
+        &--heading{
+            font-size: 1.25rem;
+            padding-top: .5rem;
+        }
+        &--subheading{
+            font-size: .9rem;
+            padding-top: .5rem;
+        }
+    }
+
+    .orange,.red,.blue{
+        background-image: none;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .about--container__card{
+        flex-basis: 80%;
+        height: 35%;
+        margin-top: 1.5rem;
+        &--heading{
+            font-size: 1.25rem;
+            padding-top: .5rem;
+        }
+        &--subheading{
+            font-size: .9rem;
+            padding-top: .5rem;
+        }
+    }
+    .orange,.red,.blue{
+        background-image: none;
+    }
+}
+
+@media (min-width: 361px) and (width: 640px){
+
+    .about--container{
+        grid-row: 2 / span 4;
+    }
+
+    .about--container__card{
+        flex-basis: 27.5%;
+        height: 70%;
+        margin-top: .25rem;
+        &--heading{
+            font-size: 1rem;
+            padding-top: .5rem;
+        }
+        &--subheading{
+            font-size: .75rem;
+            padding-left: .5rem;
+            padding-bottom: 2.5rem;
+        }
+    }
+    .orange,.red,.blue{
+        background-image: none;
+    }
+}
+@media (min-width: 361px) and (max-width: 375px){
+    .about--container__card--subheading{
+        font-size: .7rem;
+        padding-left: .5rem;
+    }
+}
+
+@media (min-width: 737px) and (max-width: 740px){
+    .about--container{
+        grid-row: 2 / span 4;
+    }
+
+    .about--container__card{
+        flex-basis: 27.5%;
+        height: 70%;
+        margin-top: .25rem;
+        &--heading{
+            font-size: 1rem;
+            padding-top: .5rem;
+        }
+        &--subheading{
+            font-size: .75rem;
+            padding-left: .5rem;
+            padding-bottom: 2.5rem;
+        }
+    }
+    .orange,.red,.blue{
+        background-image: none;
+    }
+}
